@@ -1,0 +1,129 @@
+Given Numbers with a sum of digits
+Addind And Multiplication of them
+with others random decimal,float numbers
+equals in some cases with the same sum of digits
+
+//Example One
+
+for the voyerists have fun with ur extreme wonderfull behaviour xD
+Number one : 15381
+Number two : 27422
+Number one is 15381 with number of digits 5 and sum 18
+Number two is 27422 with number of digits 5 and sum 17
+Showing the Tables
+Table 1 
+0 with value 1 | 1 with value 5 | 2 with value 3 | 3 with value 8 | 4 with value 1 | 
+Table 2 
+0 with value 2 | 1 with value 7 | 2 with value 4 | 3 with value 2 | 4 with value 2 | 
+
+Generating Spaces Between
+Space one 14999 with 15999
+Space two 26999 with 27999
+Generating all the sums for each space
+
+Space one start 14999
+Space one continuation sum  start 5
+Space one end 15999
+Space one continuation sum  end 6
+Space two start 26999
+Space two continuation sum  start 8
+Space one end 27999
+Space two continuation sum  end 9
+End of Sums Generation
+
+For Space one start choose a starting space number 14999 : 5
+
+For Space one end choose an ending space number 15999 : 6
+
+For Space two start choose a starting space number 26999 : 8
+
+For Space two end choose an ending space number 27999 : 9
+
+genn start 14999 with 5 and value of  5
+------>
+genn found 15381 with sum 18 sum second 18 and value of  594 and final 5.94
+<------
+--------- > for 15381 da float is 5.94
+
+
+genn start 26999 with 8 and value of  8
+------>
+genn found 27422 with sum 17 sum second 17 and value of  89 and final 8.9
+<------
+--------- > for 27422 da float is 8.9
+
+
+//Add=Addition Calculation
+//Pol=Multiplication Calculation 
+
+for 15381 and 27422 rs add is 42803 with cding 17
+
+for 15381 and 27422 rs pol is 421777782 with cding 45
+
+*************************************************************
+Calculating Floatters Sums
+
+floattying  52.9 | floattying  14.8 | 
+1 Values based on floatty for POL 52.9 : 16 |  ADD  14.8 : 13
+
+floattying  52.87 | floattying  14.84 | 
+2 Values based on floatty for POL 52.87 : 22 |  ADD  14.84 : 17
+
+floattying  52.866 | floattying  14.840 | 
+3 Values based on floatty for POL 52.866 : 27 |  ADD  14.84 : 17
+
+floattying  52.8660 | floattying  14.8400 | 
+4 Values based on floatty for POL 52.866 : 27 |  ADD  14.84 : 17
+
+floattying  52.86600 | floattying  14.84000 | 
+5 Values based on floatty for POL 52.866 : 27 |  ADD  14.84 : 17
+
+floattying  52.865997 | floattying  14.840000 | 
+6 Values based on floatty for POL 52.865997 : 51 |  ADD  14.84 : 17
+
+floattying  52.8659973 | floattying  14.8400002 | 
+7 Values based on floatty for POL 52.865997 : 54 |  ADD  14.84 : 19
+
+floattying  52.86599731 | floattying  14.84000015 | 
+8 Values based on floatty for POL 52.865997 : 55 |  ADD  14.84 : 23
+
+floattying  52.865997314 | floattying  14.840000153 | 
+9 Values based on floatty for POL 52.865997 : 59 |  ADD  14.84 : 26
+
+floattying  52.8659973145 | floattying  14.8400001526 | 
+10 Values based on floatty for POL 52.865997 : 64 |  ADD  14.84 : 31
+
+floattying  52.86599731445 | floattying  14.84000015259 | 
+11 Values based on floatty for POL 52.865997 : 68 |  ADD  14.84 : 39
+
+floattying  52.865997314453 | floattying  14.840000152588 | 
+12 Values based on floatty for POL 52.865997 : 71 |  ADD  14.84 : 46
+
+floattying  52.8659973144531 | floattying  14.8400001525879 | 
+13 Values based on floatty for POL 52.865997 : 72 |  ADD  14.84 : 54
+
+floattying  52.86599731445312 | floattying  14.84000015258789 | 
+14 Values based on floatty for POL 52.865997 : 74 |  ADD  14.84 : 62
+
+floattying  52.865997314453125 | floattying  14.840000152587891 | 
+15 Values based on floatty for POL 52.865997 : 79 |  ADD  14.84 : 63
+
+floattying  52.8659973144531250 | floattying  14.8400001525878906 | 
+16 Values based on floatty for POL 52.865997 : 79 |  ADD  14.84 : 68
+
+
+End of Floatters Calculation
+*************************************************************
+
+for adding 14840000
+for polling 52865997
+Generating ladd correction with 594 89 and sum as 683  as 17
+Generating fvlpos correction with 594 89 and pol as 52866  as 27
+
+for 5.9400001 and 8.8999996 rs add is 14.84 with cding 17 and correct 17 [see **]
+
+for 5.9400001 and 8.8999996 rs pol is 52.865997 with cding 51 and correct 27 [see **]
+
+for 594 and 89 rs add is 683 with cding 17
+
+for 594 and 89 rs pol is 52866 with cding 27
