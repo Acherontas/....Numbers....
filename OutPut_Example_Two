@@ -1,0 +1,126 @@
+Second Example
+
+Its the same main numbers different floatters 
+
+for the voyerists have fun with ur extreme wonderfull behaviour xD
+Number one : 15381
+Number two : 27422
+Number one is 15381 with number of digits 5 and sum 18
+Number two is 27422 with number of digits 5 and sum 17
+Showing the Tables
+Table 1 
+0 with value 1 | 1 with value 5 | 2 with value 3 | 3 with value 8 | 4 with value 1 | 
+Table 2 
+0 with value 2 | 1 with value 7 | 2 with value 4 | 3 with value 2 | 4 with value 2 | 
+
+Generating Spaces Between
+Space one 14999 with 15999
+Space two 26999 with 27999
+Generating all the sums for each space
+
+Space one start 14999
+Space one continuation sum  start 5
+Space one end 15999
+Space one continuation sum  end 6
+Space two start 26999
+Space two continuation sum  start 8
+Space one end 27999
+Space two continuation sum  end 9
+End of Sums Generation
+
+For Space one start choose a starting space number 14999 : 7
+
+For Space one end choose an ending space number 15999 : 5
+
+For Space two start choose a starting space number 26999 : 2
+
+For Space two end choose an ending space number 27999 : 1
+
+genn start 14999 with 7 and value of  7
+------>
+genn found 15381 with sum 18 sum second 18 and value of  792 and final 7.92
+<------
+--------- > for 15381 da float is 7.92
+
+
+genn start 26999 with 2 and value of  2
+------>
+genn found 27422 with sum 17 sum second 17 and value of  296 and final 2.96
+<------
+--------- > for 27422 da float is 2.96
+
+
+
+
+for 15381 and 27422 rs add is 42803 with cding 17
+
+for 15381 and 27422 rs pol is 421777782 with cding 45
+
+*************************************************************
+Calculating Floatters Sums
+
+floattying  23.4 | floattying  10.9 | 
+1 Values based on floatty for POL 23.4 : 9 |  ADD  10.9 : 10
+
+floattying  23.44 | floattying  10.88 | 
+2 Values based on floatty for POL 23.44 : 13 |  ADD  10.88 : 17
+
+floattying  23.443 | floattying  10.880 | 
+3 Values based on floatty for POL 23.443 : 16 |  ADD  10.88 : 17
+
+floattying  23.4432 | floattying  10.8800 | 
+4 Values based on floatty for POL 23.4432 : 18 |  ADD  10.88 : 17
+
+floattying  23.44320 | floattying  10.88000 | 
+5 Values based on floatty for POL 23.4432 : 18 |  ADD  10.88 : 17
+
+floattying  23.443201 | floattying  10.880000 | 
+6 Values based on floatty for POL 23.443201 : 19 |  ADD  10.88 : 17
+
+floattying  23.4432011 | floattying  10.8800001 | 
+7 Values based on floatty for POL 23.443201 : 20 |  ADD  10.88 : 18
+
+floattying  23.44320107 | floattying  10.88000011 | 
+8 Values based on floatty for POL 23.443201 : 26 |  ADD  10.88 : 19
+
+floattying  23.443201065 | floattying  10.880000114 | 
+9 Values based on floatty for POL 23.443201 : 30 |  ADD  10.88 : 23
+
+floattying  23.4432010651 | floattying  10.8800001144 | 
+10 Values based on floatty for POL 23.443201 : 31 |  ADD  10.88 : 27
+
+floattying  23.44320106506 | floattying  10.88000011444 | 
+11 Values based on floatty for POL 23.443201 : 36 |  ADD  10.88 : 31
+
+floattying  23.443201065063 | floattying  10.880000114441 | 
+12 Values based on floatty for POL 23.443201 : 39 |  ADD  10.88 : 32
+
+floattying  23.4432010650635 | floattying  10.8800001144409 | 
+13 Values based on floatty for POL 23.443201 : 44 |  ADD  10.88 : 40
+
+floattying  23.44320106506348 | floattying  10.88000011444092 | 
+14 Values based on floatty for POL 23.443201 : 51 |  ADD  10.88 : 42
+
+floattying  23.443201065063477 | floattying  10.880000114440918 | 
+15 Values based on floatty for POL 23.443201 : 57 |  ADD  10.88 : 49
+
+floattying  23.4432010650634766 | floattying  10.8800001144409180 | 
+16 Values based on floatty for POL 23.443201 : 62 |  ADD  10.88 : 49
+
+
+End of Floatters Calculation
+*************************************************************
+
+
+for adding 10880000
+for polling 23443201
+Generating ladd correction with 792 296 and sum as 1088  as 17
+Generating fvlpos correction with 792 296 and pol as 234432  as 18
+
+for 7.9200001 and 2.96 rs add is 10.88 with cding 17 and correct 17 [see **]
+
+for 7.9200001 and 2.96 rs pol is 23.443201 with cding 19 and correct 18 [see **]
+
+for 792 and 296 rs add is 1088 with cding 17
+
+for 792 and 296 rs pol is 234432 with cding 18
