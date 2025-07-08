@@ -10,4 +10,6 @@ in some cases the addition and multiplication
 of the two main 
 results in the same sum of digits with the float numbers
 
+Code as is use small digits numbers cause it takes long
+
 email for contact acherontia.myosotis@gmail.com
