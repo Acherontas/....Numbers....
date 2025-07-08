@@ -1,0 +1,480 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/cppFiles/main.cc to edit this template
+ */
+
+/*
+ * File:   main.cpp
+ * Author: Aionnio
+ *
+ * Created on 22 Ιουλίου 2023, 4:05 μ.μ.
+ */
+
+#include <cstdlib>
+#include <stdio.h>
+#include <iostream>
+#include <unistd.h>
+#include <chrono>
+#include <atomic>
+#include <thread>
+#include <climits>
+#include <limits>
+#include <iomanip>
+#include <vector>
+#include <sstream>
+using namespace std;
+
+
+/*
+ *
+ */
+int cdi;
+int fl;
+int m;
+int stping;
+int numberaro[18];
+int numberart[18];
+int cnar;
+ long long int cd( long long int n,int tbl,double mk){
+     //cout<<"inserting for adding digits " << mk <<"\n";
+    if(n==0){n=mk;}
+    if(mk==0){n=n;}
+    m=n%10;
+    cdi+=m;
+    fl=-1;
+    if(n/10==0){
+       //cout<<"zeroing " << m << " and result "<< cdi <<"\n";
+        if(tbl==1){numberaro[cnar]=m; cnar+=1;}
+        if(tbl==2){numberart[cnar]=m; cnar+=1;}
+      //  cout<<"zeroing " << m << " and result "<< cdi <<"\n";
+        fl=1;
+               if(fl==1){
+                   //cout<<"fl is " << fl << " with cdi " << cdi <<"\n";
+               } //cdi=0;
+               return cdi;   //return 1;
+    }
+    else
+    {
+         //cout<<"looping with " << n << " and "  << m << " and semi-result " << cdi << "\n";
+        if(tbl==1){numberaro[cnar]=m; cnar+=1;}
+        if(tbl==2){numberart[cnar]=m; cnar+=1;}
+      //  cout<<"looping with " << n << " and "  << m << " and semi-result " << cdi << "\n";
+        cd(n/10,tbl,mk);  //return 1 + cd(n/10);
+    }
+    return cdi;
+}
+
+ int nof(long long int nl){ if(nl/10==0){stping+=1;}else{stping+=1; nof(nl/10);} return stping;}
+
+ int conti(string x,int sp,string enst){
+  cdi=0; cnar=1;  int ms=cd(sp,0,0);
+    int nul;
+    stping=0;nul=nof(ms);  int fli=0;
+   if(nul>1){
+       for(;;){
+       cdi=0;cnar=1;ms=cd(ms,0,0);
+       cout<<"Space " << x << " continuation sum  " << enst << " "  << ms <<"\n";
+       stping=0;nul=nof(ms);
+       if(nul==1){ fli=1;break;}
+       if(fli==1){break;}
+       }
+   }
+    return 0;
+ }
+
+ int gen_conti(long long int x){
+  cdi=0; cnar=1;  int ms=cd(x,0,0);
+    int nul;
+    stping=0;nul=nof(ms);  int fli=0;
+   if(nul>1){
+       for(;;){
+       cdi=0;cnar=1;ms=cd(ms,0,0);
+       stping=0;nul=nof(ms);
+       if(nul==1){ fli=1;break;}
+       if(fli==1){break;}
+       }
+   }
+    return ms ;
+ }
+
+ int sh_them;
+
+long long int founditvlo;long long int founditvlotw;
+int chrn;
+float gen_them(long long int space_start,long long int space_value,long long int space_end,long long int space_vl_end,long long int user_number,int xt){
+ long long int genn; int z=0;int mim;float mnm ; string mn;int lo;string mni;int fll=1;
+ int vl;float vli;int mrk;int mrl=-2;string nm;string lk;int fnd=-12; float foundit;
+ genn=space_start;
+ lo=z+1; ;
+   mn="";mn+=to_string(space_value); mn+=to_string(lo);mim=stoi(mn);
+   mni=""; mni+=to_string(space_value);mni+='.';mni+=to_string(lo);mnm=stof(mni);
+   for(int i=space_start;i<=space_end;i++){
+       if(genn==space_start){ //int mk=space_value;
+       cout<<"genn start " << genn  << " with " << space_value << " and value of  " << space_value << "\n";
+       }
+       if(genn>space_start ){cdi=0;cnar=1;int mni=cd(genn,0,0); vl=mim; z=0;
+           for(;;){
+               cdi=0;cnar=1; mrk=cd(vl,0,0);
+               if(mrk==mni){fll=2; break;}
+               if(mrk!=mni){
+                   z+=1;
+                   nm=""; nm+=to_string(space_value);nm+=to_string(z);vl=stoi(nm);
+                   lk="";lk+=to_string(space_value);lk+='.';lk+=to_string(z);
+                   vli=stof(lk);
+                   cdi=0;cnar=1;mrk=cd(vl,0,0);
+                   if(sh_them==1){
+                    cout<<"genn found temp value of " << genn  << " with sum " <<  mni << " sum second " << mrk <<  " and value of  " << vl << " and final " << vli <<  "\n";
+                    std::this_thread::sleep_for(std::chrono::milliseconds(chrn));
+                   }
+               }
+                   stping=0;int nul=nof(mrk);
+                   if(nul>1){
+                   int mrlo=gen_conti(mrk);
+                   if(mrlo==mni && genn!=user_number){goto CD;}
+                   if(mrlo==mni && genn==user_number ){goto D;}}
+               if(z==9){z=90;}if(z==99){ z=990;}if(z==999){z=9990;}if(fll==2){break;}
+           }
+           if(genn==space_start+1 && mrl==-2){vli=mnm; mrl==12;}
+       D:
+       if(genn==user_number ){
+               cout<<"------>\n";
+               cout<<"genn found " << genn  << " with sum " <<  mni << " sum second " << mrk <<  " and value of  " << vl << " and final " << vli <<  "\n";
+               cout<<"<------\n";
+               foundit=vli;
+               if(xt==1){founditvlo=vl;}
+               if(xt==2){founditvlotw=vl;}
+               fnd=2;
+               goto AB;
+           }
+       fll=1;
+   }
+       if(genn==space_end)
+       {
+           mrl=1;cout<<"genn end " << genn  << " with value of " <<  space_vl_end << "\n";
+           cout<<"\n";
+       }
+       CD:
+       genn=i+1;
+   }
+   AB:
+   cout<<"--------- > for " <<  user_number <<  " da float is " << foundit <<"\n";
+   cout<<"\n";
+   return foundit;
+ }
+
+
+int floatty_sum(float nmbr,string s,int xts,int prec)
+{   string m;int mm=0;char k;
+    if(xts==0){
+    m="";
+    m+=to_string(nmbr);
+    }
+   if(xts==1){
+
+      m=" ";//m+=s;
+      for(int i=0;i<prec;i++)
+      {
+          m+=s.at(i);
+      }
+      // cout<<"m is " << m <<"\n";
+    }
+//cout<<"----------\n";
+cout<<"floattying " << m  <<" | ";
+mm=0;
+    for(int i=0;i<m.size();i++)
+    {       k='0';
+        if(isdigit(m.at(i))){
+         //   cout<<m.at(i)<<"\n";
+            k=m.at(i);
+            mm+=stoi(&k);
+           // std::this_thread::sleep_for(std::chrono::milliseconds(500));
+  //          cout<<"adding to mm : " << mm <<"\n";
+        }
+    }
+//cout<<"--------\n";
+   // cout<<"the sum is " << mm <<"\n";
+
+    return mm;
+}
+
+
+ int manu;
+ long long int mspace;long long int mspaceent;
+ long long int mspacee=0;long long int mspaceentt=0;
+ int bypass;
+ int times_in_for=16;
+int main(int argc, char** argv) {
+
+    cout<<"for the voyerists have fun with ur extreme wonderfull behaviour xD\n";
+    cout<<"for the others if u enter 1 u will be ask to give the spaces \n";
+    cout<<"for showing the numbers gen list == 1 \n";
+    cout<<"for is the F**** CHRONO xD\n";
+    cout<<"for bypass values of final calculations\n";
+    cout<<"for times in floatters calculation\n";
+    cout<<"defaults 0 0 1 0 16\n";
+
+    cout<<"i was joking \n";
+    cout<<"\n";
+
+    manu=stoi(argv[1]);
+    sh_them=stoi(argv[2]);
+    chrn=stoi(argv[3]);
+    bypass=stoi(argv[4]);
+    times_in_for=stoi(argv[5]);
+    if(manu==0){mspace=0;mspaceent=0;mspacee=0;mspaceent=0;}
+    if(manu==1){
+        cout<<"Space one start \n"; cin >> mspace;
+        cout<<"Space one end \n"; cin >> mspaceent;
+        cout<<"Space two start \n"; cin >> mspacee;
+        cout<<"Space two end \n"; cin >> mspaceentt;
+    }
+    for(int i=0;i<=18;i++){ numberaro[i]=-1;numberart[i]=-1;}
+
+  // int nmbof_one,nmbof_two;
+   int nu,nuu;
+   long long int n_one,n_two;
+
+   cout<<"Number one :\n"; cin >> n_one; stping=0;nu=nof(n_one);
+   cout<<"Number two :\n"; cin >> n_two; stping=0;nuu=nof(n_two);
+   cdi=0; cnar=1; long long int m=cd(n_one,1,0);
+   cdi=0; cnar=1; long long int mm=cd(n_two,2,0);
+   cout<<"Number one is " << n_one  << " with number of digits " << nu <<" and sum " << m << "\n";
+   cout<<"Number two is "  << n_two << " with number of digits " << nuu <<" and sum " << mm << "\n";
+   cout<<"Showing the Tables\n";
+   int tbl_one[nu];
+   int tbl_two[nuu];
+   int x=0;
+   int y=0;
+   for(int i=nu;i>0;i--){tbl_one[x]=numberaro[i]; x+=1;}
+   for(int i=nuu;i>0;i--){tbl_two[y]=numberart[i];y+=1;}
+   cout<<"Table 1 \n";
+  // int rpl=-2; int ctrpl=0;int ctrplt=0;
+   for(int i=0;i<nu;i++){cout<< i << " with value " << tbl_one[i] << " | ";}
+   cout<<"\n";
+   cout<<"Table 2 \n";
+  // rpl=-2;
+   for(int i=0;i<nuu;i++){cout<< i << " with value " << tbl_two[i] << " | ";}
+   cout<<"\n";
+   cout<<"\n";
+
+
+   if(manu==0){
+   cout<<"Generating Spaces Between\n";
+
+   int mlk;
+   string s;
+   string si;
+
+   for(int i=0;i<nu;i++){
+       if(i<1){
+           s+=to_string(tbl_one[i]);
+           si+=to_string(tbl_one[i]);
+       }
+       if(i==1){
+           if(tbl_one[i]==0){
+               s=" ";si=" ";mlk=tbl_one[i-1]-1;
+               s+=to_string(mlk);si+=to_string(mlk+1);
+               s+="9";
+               if(mlk+1==1){si+="0";}else{si+="9";}
+           }
+           if(tbl_one[i]!=0){
+           mlk=tbl_one[i]-1; s+=to_string(mlk);
+           mlk=0;
+           si+=to_string(tbl_one[i]);}
+       }
+       if(i>1){s+="9";si+="9";}
+   }
+   mspace=stoll(s);
+   mspaceent=stoll(si);
+   cout<<"Space one " <<  mspace << " with " << mspaceent <<   "\n";
+   mlk=0;s=" ";si=" ";
+   for(int i=0;i<nuu;i++){
+      if(i<1){ s+=to_string(tbl_two[i]);
+       si+=to_string(tbl_two[i]);}
+       if(i==1){
+          if(tbl_two[i]==0){
+               s=" ";si=" ";mlk=tbl_two[i-1]-1;
+               s+=to_string(mlk);si+=to_string(mlk+1);
+               s+="9";
+               if(mlk+1==1){si+="0";}else{si+="9";}
+           }
+           if(tbl_two[i]!=0){
+           mlk=tbl_two[i]-1; s+=to_string(mlk);
+           mlk=0;
+           si+=to_string(tbl_two[i]);}
+       }
+       if(i>1){s+="9";si+="9";}
+   }
+   mspacee=stoll(s);
+   mspaceentt=stoll(si);
+   cout<<"Space two " <<  mspacee << " with " << mspaceentt <<   "\n";
+   //if manu is on xD
+   }
+   cout<<"Generating all the sums for each space\n";
+   cout<<"\n";
+   cout<<"Space one start " << mspace << "\n";
+   int cont=conti("one",mspace,"start");
+   cout<<"Space one end " << mspaceent << "\n";
+   int con=conti("one",mspaceent,"end");
+   cout<<"Space two start " << mspacee << "\n";
+   int co=conti("two",mspacee,"start");
+   cout<<"Space one end " << mspaceentt << "\n";
+   int c=conti("two",mspaceentt,"end");
+   cout<<"End of Sums Generation\n";
+
+   int sposta,spoend;
+   int sptsta,sptend;
+   cout<<"\n";
+   cout<<"For Space one start choose a starting space number " << mspace << " : "  ; cin >> sposta; cout << "\n";
+   cout<<"For Space one end choose an ending space number " << mspaceent << " : "  ; cin >> spoend ; cout <<"\n";
+   cout<<"For Space two start choose a starting space number " << mspacee << " : " ; cin >> sptsta; cout <<"\n";
+   cout<<"For Space two end choose an ending space number " << mspaceentt << " : " ; cin >> sptend; cout<<"\n";
+
+
+   //this is for the first.
+   //create the numbers
+   float foundit=gen_them(mspace,sposta,mspaceent,spoend,n_one,1);
+   cout<<"\n";
+   //this is for the second
+   float foundittw=gen_them(mspacee,sptsta,mspaceentt,sptend,n_two,2);
+   cout<<"\n";
+   //end of numbers creations
+
+   int sumof;
+   sumof=n_one+n_two;
+   cdi=0;cnar=1;
+   int rs_sumof=cd(sumof,0,0);
+
+   long long int polof;
+   polof=n_one * n_two;
+   cdi=0;cnar=1;
+   int rs_polof=cd(polof,0,0);
+
+   float madd;
+   madd=foundit + foundittw;
+   float kmad;
+   std::stringstream streamm;
+   streamm<<std::fixed << std::setprecision(5)<<madd; //5
+   kmad=stof(streamm.str());
+
+
+   float mpolf;
+   mpolf=foundit * foundittw;
+   float kmpolf;
+   std::stringstream stream;
+   stream << std::fixed << std::setprecision(7) << mpolf ; //7
+   kmpolf = stof(stream.str());
+
+
+   cout<<"\n";
+
+   cout<<"\n";
+   cout<<"for " << n_one << " and " << n_two << " rs add is " << sumof << " with cding " << rs_sumof <<"\n";
+   cout<<"\n";
+   cout<<"for " << n_one << " and " << n_two << " rs pol is " <<setprecision(8)<< polof << " with cding " << rs_polof <<"\n";
+   cout<<"\n";
+
+    double lri;
+    double kmaddl;
+    cout<<"*************************************************************\n";
+    cout<<"Calculating Floatters Sums\n";
+    cout<<"\n";
+    int cnto=0;
+    int l;int ll;
+   for(int i=1;i<=times_in_for;i++)
+  {
+//       cout<<i << " ADD FLOAT " << setprecision(i)<<kmad<<" | " ;
+//       cout<<i << " POL FLOAT: " << setprecision(i) << kmpolf <<" | " ;
+//       cout<<i << " POL INT: " << setprecision(i)<<polof<<"\n" ;
+      // if(i==8){
+      //     cout<<"AAAA ";
+           std::stringstream stream;
+           stream << std::fixed << std::setprecision(i) << kmpolf ; //7
+           //mkll=stof(stream.str());
+           lri=stold(stream.str());
+           l=0;
+           l=floatty_sum(0,stream.str(),1,stream.str().size());
+           std::stringstream streamone;
+           streamone<<std::fixed<<std::setprecision(i)<<kmad;
+           kmaddl=stold(streamone.str());
+           ll=0;
+           ll=floatty_sum(0,streamone.str(),1,streamone.str().size());
+//           std::stringstream streamtwo;
+//           streamtwo<<std::fixed<<std::setprecision(i)<<polof;
+//           int lll=floatty_sum(0,streamtwo.str(),1);
+          // cout<<"found " << lri << " " << kmaddl<< " " << polof <<  "\n";
+           cout<<"\n";
+           cout<<i << " Values based on floatty for POL " << lri <<  " : " << l << " |  ADD  " << kmaddl  << " : " << ll << "\n"; // " |  POL Int " << lll << "\n";
+           cout<<"\n";
+           std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+      //     break;
+      // }
+           cnto+=1;
+           if(cnto==20){break;}
+   }
+    cout<<"\n";
+    cout<<"End of Floatters Calculation\n";
+    cout<<"*************************************************************\n";
+ //  cout<<"found outter " <<  " lri " << lri << " kmaddl "  << kmaddl << "\n";
+  // cout<<"lri " << lri*1000000<< " " << " kmaddl "  << kmaddl * 1000000 <<"\n";
+   cout<<"\n";
+
+
+     if(bypass==1){
+       cout<<"Use the dot (.) \n";
+       cout<<"For Add choose the number  : " << "\n";
+       cin >> kmaddl ;
+       cout<<"u choose -> " << kmaddl <<"\n";
+       cout<<"For Multiply choose the number : " << "\n";
+       cin >> lri ;
+       cout<<"u choose -> " << lri <<"\n";
+   }
+   cout <<"\n";
+
+   double maddd=kmaddl*1000000;
+   double rmad;
+   rmad=maddd;
+   cdi=0;cnar=1;
+   cout<<"for adding " << rmad<<"\n";
+   int rs_maddof=cd(0,0,rmad);
+
+   double mpolff=lri*1000000;
+   double rpolf;
+   rpolf=mpolff;
+   cdi=0;cnar=1;
+   cout<<"for polling " << rpolf << "\n";
+   int rs_mpolf=cd(0,0,rpolf);
+
+   long long int fvladd;
+   fvladd=founditvlo + founditvlotw;
+   cdi=0;cnar=1;int ladd=cd(fvladd,0,0);
+   cout<<"Generating ladd correction with " << founditvlo << " " << founditvlotw << " and sum as " << fvladd <<" ";
+   cout<<" as " << ladd <<"\n";
+
+   long long int fvlpol;
+   fvlpol=founditvlo*founditvlotw;
+   cdi=0;cnar=1;int lpol=cd(fvlpol,0,0);
+   cout<<"Generating fvlpos correction with " << founditvlo << " " << founditvlotw << " and pol as " << fvlpol <<" ";
+   cout<<" as " << lpol <<"\n";
+
+
+
+
+   cout<<"\n";
+   cout<<"for " << foundit << " and " << foundittw << " rs add is " <<setprecision(8)<< kmad << " with cding " << rs_maddof << " and correct " << ladd << "\n";
+   cout<<"\n";
+   cout<<"for " << foundit << " and " << foundittw << " rs pol is " <<setprecision(8) << kmpolf << " with cding " << rs_mpolf << " and correct " << lpol <<"\n";
+   cout<<"\n";
+
+
+   cout<<"for " << founditvlo << " and " << founditvlotw << " rs add is " << fvladd << " with cding " << ladd <<"\n";
+   cout<<"\n";
+   cout<<"for " << founditvlo << " and " << founditvlotw << " rs pol is " << fvlpol << " with cding " << lpol <<"\n";
+   cout<<"\n";
+
+
+
+
+   return 0;
+}
+

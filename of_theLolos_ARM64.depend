@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1725641753 source:/home/acherontas/codeblock/of_theLolos_ARM64/main.cpp
+	<cstdlib>
+	<stdio.h>
+	<iostream>
+	<unistd.h>
+	<chrono>
+	<atomic>
+	<thread>
+	<climits>
+	<limits>
+	<iomanip>
+	<vector>
+	<sstream>
+
